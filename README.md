@@ -15,6 +15,8 @@ To use yo generators, see [https://github.com/DaftMonk/generator-angular-fullsta
 
 For example, running ```yo angular-fullstack:route testing``` from a terminal will generate a page titled 'testing'.
 
+Use a route to add a new page. This generates an HTML, CSS, controller, javascript file, and test template for the page you want to add. It also links in all of these files for you. Use this to generate the page for your GPA calculator (don't copy your existing files (or if you do, don't ask for help :P)).
+
 ## To Develop
 
 Run ```grunt serve``` to start node and run the web application on [http://localhost:9000](http://localhost:9000). (The page will be opened automatically by grunt)
@@ -32,3 +34,5 @@ To run tests, run ```grunt test```.
 * In the same settings menu, click the green "+" and add the database "yeoman-dev" and label it the same.
 
 To use the plugin, open the Mongo Explorer tab and right click on the yeomean-dev server and choose "refresh this server". You can then double click on your dabatase and view its contents.
+
+Play around with Mongo and this plugin, it's super helpful!
