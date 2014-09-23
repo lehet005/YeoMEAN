@@ -17,6 +17,8 @@ For example, running ```yo angular-fullstack:route testing``` from a terminal wi
 
 Use a route to add a new page. This generates an HTML, CSS, controller, javascript file, and test template for the page you want to add. It also links in all of these files for you. Use this to generate the page for your GPA calculator (don't copy your existing files (or if you do, don't ask for help :P)).
 
+Use the endpoint generator to add a new database (similar to Brian's movies database).
+
 ## To Develop
 
 Run ```grunt serve``` to start node and run the web application on [http://localhost:9000](http://localhost:9000). (The page will be opened automatically by grunt)
