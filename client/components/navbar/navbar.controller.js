@@ -7,7 +7,10 @@ angular.module('yeoMeanApp')
       'link': '/'
     },
     {'title': 'UMM',
-    'link': '/umm'}];
+    'link': '/umm'},{
+            'title': 'GPA Calculator',
+            'link': '/gpacalc'
+        }];
 
     $scope.isCollapsed = true;
 

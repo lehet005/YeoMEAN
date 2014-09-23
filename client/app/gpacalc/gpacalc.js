@@ -8,3 +8,4 @@ angular.module('yeoMeanApp')
         controller: 'GpacalcCtrl'
       });
   });
+
