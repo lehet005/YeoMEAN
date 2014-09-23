@@ -1,7 +1,7 @@
 YeoMEAN GPA Calculator
 ======================
 
-A Yeoman based, generator-angular-fullstack project.
+YeoMEAN is a Yeoman based, generator-angular-fullstack project created by Brian. This project includes quite a bit of automatically generated structure and template files. For this lab, your main goal is to build a GPA calculator that stores courses in a Mongo database and displays the overall GPA. You will want to spend some time browsing around the project with your partner once you fork the project and get the dependencies all set up. Good news! The project inculdes a couple tests to show you examples of ways to test your project.
 
 ## Dependencies to run:
 
