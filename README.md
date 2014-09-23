@@ -36,3 +36,22 @@ To run tests, run ```grunt test```.
 To use the plugin, open the Mongo Explorer tab and right click on the yeomean-dev server and choose "refresh this server". You can then double click on your dabatase and view its contents.
 
 Play around with Mongo and this plugin, it's super helpful!
+
+## What you should aim to accomplish
+
+Re-implement the GPA calculator, but this time add the following features:
+* Store the student's grades in the Mongo database.
+* Display the course titles along with the number of credits and earned grades as an editable form. When the form is edited, the GPA gets recalculated.
+* Add a button to add more courses. (This was not required last time, though I realize many of you did add such a button.)
+* Edit the CSS so that the page looks different from the initial project you forked.
+
+Along the way, *add at least two tests*. This week, I think you should be able to get some tests working. Use the example tests in the movie.spec.js file as a guide. You should use Mongoose to create schemas as needed. Whenever you generate a new page, be sure to use the instructions above for adding a new route so that the appropriate things are created for you.
+
+Update your README to include the following documentation that would help someone understand your project:
+* What are some of the dependencies of the project (i.e. which libraries does it depend on)? Hint: dependencies are in .json files. Look up four libraries and briefly explain what they each do.
+* What is the structure of the project? What is the purpose of each folder?
+* What are models? Where are they located? What does the current model describe?
+* What are views? Where are they located? What is a layout? What is a partial? Identify places where a layout renders partials.
+* schemas describe mongodb database schemas. What schema does your project have? What gets stored in the database?
+* What are routes? Open the route. Explain how each type of request gets processed. How does the resulting page change? How does the data in the database change?
+* Explain how the result GPA result is calculated and how it gets rendered on the page.
