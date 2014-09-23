@@ -5,7 +5,7 @@ YeoMEAN is a Yeoman based, generator-angular-fullstack project created by Brian.
 
 ## Dependencies to run:
 
-You will need to have some global dependencies installed. Ask Brian if these are installed on the machine you are on. If not, have him run these as root for you:
+You will need to have some global dependencies installed. These should be installed, if not, have Brian run these as root for you:
 
 ```sh
 $ npm install -g yo && npm install -g grunt && npm install -g generator-angular-fullstack
@@ -47,7 +47,7 @@ Re-implement the GPA calculator, but this time add the following features:
 * Add a button to add more courses. (This was not required last time, though I realize many of you did add such a button.)
 * Edit the CSS so that the page looks different from the initial project you forked.
 
-Along the way, *add at least two tests*. This week, I think you should be able to get some tests working. Use the example tests in the movie.spec.js file as a guide. You should use Mongoose to create schemas as needed. Whenever you generate a new page, be sure to use the instructions above for adding a new route so that the appropriate things are created for you.
+Along the way, *add at least two tests*. This week, I think you should be able to get some tests working. Use the example tests in the /client/app/umm/umm.controller.spec.js file as a guide. You should use Mongoose to create schemas as needed. Whenever you generate a new page, be sure to use the instructions above for adding a new route so that the appropriate things are created for you.
 
 Update your README to include the following documentation that would help someone understand your project:
 * What are some of the dependencies of the project (i.e. which libraries does it depend on)? Hint: dependencies are in .json files. Look up four libraries and briefly explain what they each do.
