@@ -17,21 +17,19 @@ angular.module('yeoMeanApp')
         ];
 
 //this is each class item with a name, credit amount, and a value of each grade letter
-        $scope.classes = {
-            class: [{
-                name:'name',
-                credit: 1,
-                grade:{
-                    sign:'',
-                    value:''}
-            }]
-        };
+        $scope.classes = [{
+            name:'name',
+            credit: 0,
+            grade:{
+                sign:'',
+                value:''}
+        }];
 
         //this function will push a new class to the class list
         $scope.addClass = function() {
-            $scope.classes.class.push({
+            $scope.classes.push({
                 name:'name',
-                credit: 1,
+                credit: 0,
                 grade: {
                     sign:'',
                     value:''}
@@ -40,8 +38,8 @@ angular.module('yeoMeanApp')
 
         //This function allows you to remove only if the number of classes is > 1
         $scope.removeClass = function(index) {
-            if($scope.classes.class.length > 1) {
-                $scope.classes.class.splice(index, 1);
+            if($scope.classes.length > 1) {
+                $scope.classes.splice(index, 1);
             } else {window.alert("You can't drop the only class")
             }
 
@@ -51,7 +49,7 @@ angular.module('yeoMeanApp')
         $scope.total = function() {
             var total = 0;
             var cred = 0;
-            angular.forEach($scope.classes.class, function(item) {
+            angular.forEach($scope.classes, function(item) {
                 total += item.credit * item.grade.value;
                 cred += item.credit;
             });
