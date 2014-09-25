@@ -36,6 +36,15 @@ angular.module('yeoMeanApp')
             });
         };
 
+        /*$scope.saveClass = function() {
+            $http.post('/api/course', { name: $scope.name, credits: $scope.credit,
+                grade: $scope.grade.sign, value: $scope.grade.value }).success(function(){
+                //Update movieList to have the same data that's in the database on the sever
+                $http.get('/api/movies').success(function(classes) {
+                    $scope.classes = classes;
+                });
+        };*/
+
         //This function allows you to remove only if the number of classes is > 1
         $scope.removeClass = function(index) {
             if($scope.classes.length > 1) {
