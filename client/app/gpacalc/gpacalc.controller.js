@@ -41,9 +41,9 @@ angular.module('yeoMeanApp')
         };
 
         $scope.saveClass = function() {
-            /*if($scope.grade.sign === '' && $scope.credit === 0 && $scope.name === 'name') {
+            if($scope.grade.sign === '' && $scope.credit === 0 && $scope.name === 'name') {
                 return;
-            }*/
+            }
 
             $http.post('/api/courses', { name: $scope.name, credits: $scope.credit,
 

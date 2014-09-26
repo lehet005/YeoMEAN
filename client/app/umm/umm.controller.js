@@ -13,13 +13,14 @@ angular.module('yeoMeanApp')
         if($scope.newMovie === ''  || $scope.newRating === '') {
             return;
         }
-        $http.post('/api/movies', { name: $scope.newMovie, rating: $scope.newRating }).success(function(){
+        $http.post('/api/movies', { name: $scope.newMovie, rating: $scope.newRating, grade: $scope.newGrade }).success(function(){
             //Update movieList to have the same data that's in the database on the sever
             $http.get('/api/movies').success(function(movieList) {
                 $scope.movieList = movieList;
             });
             $scope.newMovie = '';
             $scope.newRating = '';
+            $scope.newGrade = '';
         });
     };
 
