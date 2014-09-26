@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('yeoMeanApp')
-  .controller('GpacalcCtrl', function ($scope) {
+  .controller('GpacalcCtrl', function ($scope, $http) {
         $scope.grades = [
             {grade:'A', value:4.000},
             {grade:'A-', value:3.667},
@@ -15,6 +15,10 @@ angular.module('yeoMeanApp')
             {grade:'D', value:1.000},
             {grade:'F', value:0.000}
         ];
+
+        $http.get('/api/courses').success(function(classes) {
+            $scope.classes = classes;
+        });
 
 //this is each class item with a name, credit amount, and a value of each grade letter
         $scope.classes = [{
@@ -36,14 +40,26 @@ angular.module('yeoMeanApp')
             });
         };
 
-        /*$scope.saveClass = function() {
-            $http.post('/api/course', { name: $scope.name, credits: $scope.credit,
+        $scope.saveClass = function() {
+            /*if($scope.grade.sign === '' && $scope.credit === 0 && $scope.name === 'name') {
+                return;
+            }*/
+
+            $http.post('/api/courses', { name: $scope.name, credits: $scope.credit,
+
                 grade: $scope.grade.sign, value: $scope.grade.value }).success(function(){
+
                 //Update movieList to have the same data that's in the database on the sever
-                $http.get('/api/movies').success(function(classes) {
+
+                $http.get('/api/courses').success(function(classes) {
+
                     $scope.classes = classes;
                 });
-        };*/
+        })
+        };
+
+
+
 
         //This function allows you to remove only if the number of classes is > 1
         $scope.removeClass = function(index) {
@@ -74,7 +90,7 @@ angular.module('yeoMeanApp')
             console.log('Dropdown is now: ', open);
         };
 
-        $scope.toggleDropdown = function($event) {
+        $scope.togglenameDropdown = function($event) {
             $event.preventDefault();
             $event.stopPropagation();
             $scope.status.isopen = !$scope.status.isopen;
