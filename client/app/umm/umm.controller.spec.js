@@ -36,7 +36,7 @@ describe('Controller: UmmCtrl', function () {
       it('should add a new movie "Batman" with a rating of 9 and return it', function() {
           scope.newMovie = "Batman";
           scope.newRating = 9;
-          scope.addMovie();
+          scope.addClass();
           //all of the http requests are added into a queue and are all run when the flush() method is called
           httpBackend.flush();
           expect(movieList[0]).toEqual({name:"Batman", rating:9});
@@ -45,7 +45,7 @@ describe('Controller: UmmCtrl', function () {
       it('should return empty object', function() {
           scope.newMovie = "Batman";
           scope.newRating = 9;
-          scope.addMovie();
+          scope.addClass();
           //The _id is used so the correct movie is deleted from the "database"
           scope.deleteMovie({name:"Batman", rating:9, _id:1});
           httpBackend.flush();
