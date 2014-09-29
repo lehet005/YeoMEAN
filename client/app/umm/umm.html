@@ -18,12 +18,13 @@
             <h3>Add A Movie:</h3>
             <form role="form" ng-submit="addMovie()">
                 <label for="movieName">New Movie Name</label>
-                <input class="form-control" id="movieName" type="text" ng-model="newMovie" size="30"placeholder="New Movie Name">
+                <input class="form-control" id="movieName" type="text" ng-model="newMovie" size="30"placeholder="Class">
                 <label for="movieRating">New Movie Rating</label>
-                <input class="form-control" id="movieRating" type="number" max="10" min="1" ng-model="newRating" placeholder="New Movie Rating (1-10)">
+                <input class="form-control" id="movieRating" type="number" max="10" min="1" ng-model="newRating" placeholder="Credit (1-5)">
                 <label for="Grade">New Grade</label>
-                <input class="form-control" id="Grade" type="text" ng-model="newGrade">
+                <input class="form-control" id="Grade" type="text" ng-model="newGrade" placeholder="New Grade (A-F)">
                 <input class="btn btn-primary" type="submit" value="Add">
+
             </form>
         </div>
     </div>
