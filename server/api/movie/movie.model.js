@@ -6,7 +6,8 @@ var mongoose = require('mongoose'),
 var MovieSchema = new Schema({
   name: String,
   rating: Number,
-  grade: String
+  grade: String,
+  GPAvalue: Number
 });
 
 module.exports = mongoose.model('Movie', MovieSchema);
