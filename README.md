@@ -71,16 +71,22 @@ Models are located in the api folder in the server folder.  The models are the m
 The current model for movies is course name, grade, value (GPA value), and credit.
 
 * What are views? Where are they located? What is a layout? What is a partial? Identify places where a layout renders partials.
-@@@@@@@@@@@@@@@@@@@@@@@@FINISH TO THIS@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//
+Views are what the user see on the page. They are located in the views folder and the client folder for our project.
+A partial is a a reference to each individual page that has it in there. Our Nav bar is a partial, it is referenced in
+components folder, and rendered in our page with the reference in our html.
 
 
 * schemas describe mongodb database schemas. What schema does your project have? What gets stored in the database?
-@@@@@@@@@@@@@@@@@@@@@@@@FINISH TO THIS@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
-The information we wish to get stored in our schema is stored there, so grade, credit, course name, and value (GPA value).
+//
+mongodb database schemas refer to the orgization of data and how the data is stored/constructed. Our project has a
+mongoose schema.  In our schema, the grade value/letter, class name, and credit are stored in the database.
 
 * What are routes? Open the route. Explain how each type of request gets processed. How does the resulting page change? How does the data in the database change?
-@@@@@@@@@@@@@@@@@@@@@@@@FINISH TO THIS@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//
+routes are the web addresses for the website. Routes also enable an app to access the mongodb.
+In our app, when an add/delete request is made, javascript updates the local array, and then changes the array within the mongodb.
+Using angular, the page always updates changes, so changes to the mongodb array are displayed instantly.
 
 * Explain how the result GPA result is calculated and how it gets rendered on the page.
 Whenever you add a value, that gets stored into the database.  We then pull that and store in into an array.  We then pulled the information from the array and calculated the GPA in a function.  This passes it to the HTML using angular, so it automatically updates.

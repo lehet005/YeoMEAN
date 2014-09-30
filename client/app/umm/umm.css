@@ -1,7 +1,7 @@
 .form-control {
     margin-bottom: 5px;
     background-color: lightgray;
-    color: white;
+    color: black;
 
 }
 body{
@@ -13,5 +13,6 @@ body{
 }
 .btn-primary{
     background-color: darkred;
+
 
 }
