@@ -51,12 +51,14 @@ Along the way, *add at least two tests*. This week, I think you should be able t
 
 Update your README to include the following documentation that would help someone understand your project:
 * What are some of the dependencies of the project (i.e. which libraries does it depend on)? Hint: dependencies are in .json files. Look up four libraries and briefly explain what they each do.
-mongoose is the framework for mongo. 
+mongoose is the framework for mongo.
+//
 cookie-parser: parses a cookie value as a type of cookie it's assigned to. (i.e. cookieParser.JSONCookie, or cookieParser.signedCookie)
 lo-dash is a framework similar to underscore, it provides a nice list of methods (such as _.forEach)
 ejs is a template which removes the use of HTML from javascript.
 
 * What is the structure of the project? What is the purpose of each folder?
+//
 The client folder contains EVERYTHING client-side.
 within client there are the subfolders app, and component.
 app contains our javascript and HTML files for the GPA calculator app.
@@ -64,6 +66,7 @@ components contains the css, html, and js for both the NAVBAR and the structure 
 The server file contains the mongodb server files and the mongoose schema files, this is our database that stores all of the information that the system needs to keep track of.
 
 * What are models? Where are they located? What does the current model describe?
+//
 Models are located in the api folder in the server folder.  The models are the mongoose schema files which describe what data that the server will be expected to hold.
 The current model for movies is course name, grade, value (GPA value), and credit.
 
@@ -81,7 +84,8 @@ The information we wish to get stored in our schema is stored there, so grade, c
 
 * Explain how the result GPA result is calculated and how it gets rendered on the page.
 Whenever you add a value, that gets stored into the database.  We then pull that and store in into an array.  We then pulled the information from the array and calculated the GPA in a function.  This passes it to the HTML using angular, so it automatically updates.
-
-Dependencies:
-
+//
+When a new class is added, it's credit value and grade value are stored into an array.  The GPA is then calculated by multiplying the grade values with the credits 
+for each class, summing them, and then dividing the sum of credits for all classes.  This is displayed by a reference to a function which calculates and returns the GPA value.
+The array which contains added grades is pushed to an identical array on mongoDB so that they do not disappear.
 
